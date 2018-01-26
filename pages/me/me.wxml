@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="more-list">
+
+    <navigator url="/pages/info/info" class="issue-link">
+      <view class="more-btn">
+        <image class="btn-icon" src="/static/images/icon/append.png"></image>
+        <text class="btn-text">个人信息</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/static/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <navigator url="/pages/password/password" class="about-link">
+      <view class="more-btn">
+        <image class="btn-icon" src="/static/images/icon/about.png"></image>
+        <text class="btn-text">修改密码</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/static/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class='placeholder'></view>
+    <navigator url="/pages/about/about" class="issue-link">
+      <view class="more-btn">
+        <image class="btn-icon" src="/static/images/icon/start.png"></image>
+        <text class="btn-text">关于我们</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/static/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="/pages/setting/setting" class="issue-link">
+      <view class="more-btn">
+        <image class="btn-icon" src="/static/images/icon/start.png"></image>
+        <text class="btn-text">设置程序</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/static/images/more/enter.png"></image>
+        </view>
+      </view>
+    </navigator>
+    <view class='placeholder'></view>
+
+      <view class="more-btn" bindtap='logout'>
+        <image class="btn-icon" src="/imgs/me/logut.png"></image>
+        <text class="btn-text">退出登录</text>
+        <view class="btn-open">
+          <image class="btn-enter" src="/static/images/more/enter.png"></image>
+        </view>
+      </view>
+
+  </view>
+</view>
+

@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="more-list">
+
+    <view class="more-btn">
+      <text class="btn-text">学号：{{username}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">姓名：{{info.name}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">性别：{{info.sex}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">类型：{{info.type}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">校区：{{info.campus}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">入学：{{info.date}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">学院：{{info.academe}}</text>
+    </view>
+
+    <view class="more-btn">
+      <text class="btn-text">专业：{{info.major}}</text>
+    </view>
+  </view>
+</view>
+

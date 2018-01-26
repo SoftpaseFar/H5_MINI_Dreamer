@@ -1,0 +1,8 @@
+<view>
+  <view class="imgitem">
+    <image src="/static/images/norecord1.png" class="empty_img"></image>
+  </view>
+  <view class="txtitem">
+    <text class="t28rpx">正在开发，感谢支持。</text>
+  </view>
+</view>

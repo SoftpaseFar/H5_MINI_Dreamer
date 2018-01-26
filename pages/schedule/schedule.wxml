@@ -1,0 +1,102 @@
+<view class='container'>
+  <view class='header'>
+  <view>2018年</view>
+  <view>第3周</view>
+  </view>
+
+  <view class='top'>
+    <view class='top-left' bindtap='addCourse'>＋</view>
+    <view class="top-item" wx:for="{{weeks}}">周{{item}}</view>
+  </view>
+  <view class='left'>
+    <view class="left-item" wx:for="{{sequences}}">{{item}}</view>
+  </view>
+  <view class='line' wx:for="{{lines}}">
+    <view class="line-item" style="margin-top:{{(index)*100}}rpx;border-bottom:1rpx {{index==4||index==8?'solid rgba(102,51,153,0.5)':'dashed lightgray'}};">
+    </view>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class="course">
+    <block wx:for="{{courses}}">
+      <view id="{{index}}"  bindtap="showDetail" animation="{{animationData}}" bindlongpress="{{currentId==-1?'editOrDel':'none'}}" class="course-item" style="margin-left: {{(item.week-1)*100+2}}rpx; margin-top: {{(item.sequence-1)*100+5}}rpx; height: {{(item.counts)*100-5}}rpx;background-color: {{colorArrays[index%8]}};">
+        <view catchtap="del" data-idx="{{index}}" class='x' style="display:{{x?'block':'none'}}">x</view>
+        {{item.name}}
+      </view>
+
+
+
+      <view bindtap='seeYou'  animation="{{currentId==index?animationTea:null}}" class="course-item" style="display: {{currentId==index?'block':'none'}};margin-left: {{(item.week-1)*100+2}}rpx; margin-top: {{(item.sequence-1)*100+5}}rpx; height: {{(item.counts)*100-5}}rpx;background: rgba(0,0,0,1);">     
+      {{"课程详情，正在开发中。。。"}}
+      </view>
+
+    </block>
+  </view>
+  <view class="conceal" style="display:{{isShow?'block':'none'}};"></view>
+
+
+
+  <view bindtap="test" animation="{{animationData}}" class='addCourse' style="display:{{isShow?'block':'none'}};">
+    <view class='addCourse-time'>
+      <view>时间：</view>
+      <view>周{{w}}</view>
+      <view>|</view>
+      <view>第{{s}}节</view>
+      <view>|</view>
+      <view>上{{c}}节</view>
+      <view style='float:right;color:blue;' catchtap='choose'>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange"  value="{{multiIndex}}" range="{{multiArray}}">
+    <view style=' position: absolute;top:0;right:-10rpx;'>
+      选择
+    </view>
+  </picker>
+      
+      
+      </view>
+    </view>
+    <form bindsubmit="formSubmit">
+      <view class='addCourse-name'>
+        <view>课程：</view>
+        <input name="name" type='text'></input>
+
+      </view>
+      <view class='aaddCourse-address'>
+        <view> 地点：</view>
+        <input name="address" type='text'></input>
+        <button catchtap='no'>取消</button>
+        <button formType="submit">确定</button>
+      </view>
+    </form>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
